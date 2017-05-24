@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ''' If a keyword in this list is present in a commits patch, that commit
     will be flagged. Add additional key words or organizational specific

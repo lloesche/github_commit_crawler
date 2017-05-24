@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ''' library to be used with github organization audit script
 '''
@@ -9,7 +9,7 @@ import json
 import github
 import logging
 import datetime
-from keywords import KEYWORDS
+from libs.keywords import KEYWORDS
 
 
 def github_authenticate(username, password):

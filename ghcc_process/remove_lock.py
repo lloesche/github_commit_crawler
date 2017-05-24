@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ''' manually removes a ghcc process lock incase something screws up '''
 
@@ -9,7 +9,7 @@ from libs.mongo_utils import disable_lock
 try:
     disable_lock()
 except pymongo.errors.ConnectionFailure:
-    print 'Error removing lock: {}'.format(sys.exc_info()[0])
-    print 'Is mongod running?'
+    print('Error removing lock: {}'.format(sys.exc_info()[0]))
+    print('Is mongod running?')
 except:
-    print 'Error removing lock: {}'.format(sys.exc_info()[0])
+    print('Error removing lock: {}'.format(sys.exc_info()[0]))

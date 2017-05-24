@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ''' Find organizational github users, look at recent commits, audit
     for keywords, flag anything questionable and write the audit results
@@ -90,7 +90,7 @@ def main(config):
         # occurs if lock is in place
         sys.exit(0)
     except GithubException:
-        print '[Github_Audit] Github Error: Rate limit: %s' % str(sys.exc_info())
+        print('[Github_Audit] Github Error: Rate limit: %s' % str(sys.exc_info()))
         disable_lock()
     except:
         if 'API rate limit exceeded' in str(sys.exc_info()[1]):
@@ -99,7 +99,7 @@ def main(config):
             disable_lock()
             sys.exit(0)
         else:
-            print 'Error: %s' % str(sys.exc_info())
+            print('Error: %s' % str(sys.exc_info()))
             try:
                 disable_lock()
             except:
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     try:
         config = yaml.load(open(args.config, 'r').read())
     except:
-        print 'Could not load the config file: "%s"' % str(sys.exc_info()[1])
+        print('Could not load the config file: "%s"' % str(sys.exc_info()[1]))
         sys.exit(1)
 
     main(config=config)
