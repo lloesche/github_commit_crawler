@@ -7,9 +7,5 @@
     common words.
 '''
 
-KEYWORDS = ['password',  # can be noisy
-            'API_KEY',
-            'apikey',
-            'secret',
-            'BEGIN RSA PRIVATE KEY',
+KEYWORDS = ['BEGIN RSA PRIVATE KEY',
             'BEGIN PGP PRIVATE']
